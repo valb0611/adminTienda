@@ -117,7 +117,7 @@ function AdminProductos() {
             onChange={handleChange}
             required
           />
-          <textarea
+          <input
             name="descripcion"
             placeholder="Descripción"
             value={form.descripcion}
