@@ -37,7 +37,7 @@ function DashboardLayout() {
               Cerrar sesión
             </button>
           )}
-          <button className="btn-secondary" onClick={() => navigate("/dashboard")}>
+          <button className="btn-secondary" onClick={() => navigate("/")}>
               Editar Productos
             </button>
         </nav>
