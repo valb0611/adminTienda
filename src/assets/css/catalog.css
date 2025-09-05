@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rock+Salt&display=swap');
+
+body {
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+button{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Layout */
+.layout-containerCatalog {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
+/* Header */
+.headerCatalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+}
+
+.logoCatalog {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+  font-family: 'Rock Salt', cursive;
+  margin-bottom: 0.5rem;
+  margin-top: 0px;
+}
+
+/* Navbar */
+.navCatalog {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navCatalog a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navCatalog a:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+/* Main */
+.main-contentCatalog {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Footer */
+.footerCatalog {
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+/* Hero Video */
+.heroVideo {
+  position: relative;
+  width: 100%;
+  height: 82vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* oscurece el video */
+  z-index: -1;
+}
+
+.heroText {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.heroText h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heroText p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btnWhite {
+  background: white;
+  color: #222;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btnWhite:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+}
+
+
+.compraSection {
+  display: flex;
+  min-height: 100vh;
+  width:100% 
+}
+
+.compraImagen,
+.compraInfo {
+  flex: 0 0 50%; 
+  height: auto;
+}
+
+/* Lado izquierdo */
+.compraImagen {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.compraImagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.compraTexto {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.compraTexto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.compraTexto p {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.btnWhatsApp {
+  background: #25d366;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btnWhatsApp:hover {
+  background: #1da851;
+  transform: scale(1.05);
+}
+
+/* Lado derecho */
+.compraInfo {
+  background: #222;
+  color: white;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box; 
+}
+
+
+.compraInfo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.paso {
+  margin-bottom: 2rem;
+}
+
+.paso h3 {
+  font-size: 1.5rem;
+  color: #f9f9f9;
+  margin-bottom: 0.5rem;
+}
+
+.paso p {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.producto-card {
+  width: 300px; /* tarjeta más grande */
+  border: 1px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.15);
+}
+
+.producto-card img {
+  width: 100%;
+  height: auto; 
+  max-height: 240px; 
+  object-fit: contain; 
+  border-radius: 12px;
+  padding: 0.5rem;
+  background: none; 
+  box-sizing: border-box;
+  background: none; 
+}
+
+
+
+.producto-info {
+  padding: 1rem;
+}
+
+.producto-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.producto-info p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.producto-precio {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+
+/* Grid para mostrar 4 productos por fila */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 2rem; /* espacio entre tarjetas */
+  justify-items: center; /* centra las tarjetas en cada columna */
+  margin-top: 2rem;
+}
+
+
+
+/* Contenedor del título y buscador */
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.catalog-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.catalog-search {
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  min-width: 200px;
+}
+
+.catalog-search:focus {
+  border-color: #333;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Flechas */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color:  #555;
+  font-weight: bold;
+  border: none;
+  padding: 8px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  background: none;
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+.carousel-arrow.right {
+  right: 10px;
+}
+
+
+
+/* Puntos */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+  }
+}
+
+@media (max-width: 600px) {
+  .productos-grid {
+    grid-template-columns: 1fr; /* 1 producto por fila */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .compraSection {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .compraImagen, .compraInfo {
+    flex: none;
+    width: 100%;
+    min-height: 400px; 
+  }
+
+   .compraInfo {
+    
+    padding-left: 2rem;
+  }
+
+
+  .compraTexto h2 {
+    font-size: 2rem;
+  }
+
+  .compraInfo h2 {
+    text-align: left;
+
+  }
+  .heroText h1{
+    font-size: 2.5rem;
+  }
+}
+
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navCatalog {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-contentCatalog {
+    padding: 1rem;
+  }
+}

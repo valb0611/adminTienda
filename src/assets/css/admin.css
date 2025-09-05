@@ -1,0 +1,138 @@
+.admin-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Formulario y preview juntos */
+.form-preview-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Formulario */
+.admin-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.08);
+}
+
+.admin-form input,
+.admin-form select {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.admin-form input:focus,
+.admin-form select:focus {
+  border-color: #666;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.admin-form button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 40px;
+  border: none;
+  background: #888; /* neutro */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-form button:hover {
+  background: #555;
+}
+
+/* Preview producto */
+.producto-card {
+  flex: 1;
+  width: 300px; /* tarjeta más grande */
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.08);
+}
+
+.producto-card img {
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.producto-info h3 {
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.producto-precio {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botones de acción */
+.admin-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.admin-actions button {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-actions .editar {
+  background: #bbb;
+  color: #111;
+}
+
+.admin-actions .eliminar {
+  background: #999;
+  color: #fff;
+}
+
+/* Lista de productos */
+.admin-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .form-preview-container {
+    flex-direction: column;
+    
+  }
+
+  .admin-form{
+    width: 80%;
+  }
+  .producto-card {
+    width: 90%;
+   
+  }
+}
